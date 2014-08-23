@@ -106,6 +106,34 @@ namespace MyStudyLife
         private void textBoxEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+            ControllerClass msController = new ControllerClass();
+
+            if (textBoxEmail.Text != "")
+            {
+                if (msController.IsValidEmail(textBoxEmail.Text))
+                {
+
+                    labelEmailAlert.Foreground = Brushes.Green;
+                    labelEmailAlert.Content = "Valid Email!";
+
+                }
+
+                else
+                {
+
+                    labelEmailAlert.Foreground = Brushes.Red;
+                    labelEmailAlert.Content = "Invalid Email!";
+
+                }
+            }
+
+            else
+            {
+
+                labelEmailAlert.Content = "";
+
+            }
+
         }
 
         private void textBoxConfirmEmail_TextChanged(object sender, TextChangedEventArgs e)

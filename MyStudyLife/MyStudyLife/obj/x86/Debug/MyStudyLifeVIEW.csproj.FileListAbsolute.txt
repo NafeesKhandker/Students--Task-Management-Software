@@ -44,3 +44,19 @@ F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\bin\Debug\MyStudy
 F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
 D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
 D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csprojResolveAssemblyReference.cache
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_home.baml
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_Home1.baml
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignIn.baml
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_StartUp.baml
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignUp.baml
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_home.g.cs
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_Home1.g.cs
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignIn.g.cs
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_StartUp.g.cs
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignUp.g.cs
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\App.g.cs
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife_MarkupCompile.cache
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.g.resources
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.Properties.Resources.resources
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csproj.GenerateResource.Cache
