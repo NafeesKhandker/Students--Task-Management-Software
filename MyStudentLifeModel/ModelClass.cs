@@ -64,22 +64,7 @@ namespace MyStudentLifeModel
         {
 
            
-            SqlConnection conn = new SqlConnection(connectionString);
-            try
-            {
-
-                string query = "INSERT INTO Tbl_SignUpInfo (First_Name, Last_Name, Email, Password) VALUES ('Nafees', 'Khandker', 'nafees@gmail.com', '123456')";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-            }
-
-            catch (Exception e)
-            {
-                conn.Close();
-
-            }
+           
 
         }
     }
