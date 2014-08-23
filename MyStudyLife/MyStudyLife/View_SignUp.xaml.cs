@@ -66,7 +66,39 @@ namespace MyStudyLife
 
         private void buttonSignUp_Click(object sender, RoutedEventArgs e)
         {
+            if (textBoxFirstName.Text != "" && textBoxLastName.Text != "" && textBoxEmail.Text != "" && textBoxConfirmEmail.Text != "" && passwordBoxPassword.Password != "" && passwordBoxConfirmPassword.Password != "")
+            {
 
+                ModelClass model = new ModelClass();
+
+                if (model.SignUpInsertion(textBoxFirstName.Text, textBoxLastName.Text, textBoxEmail.Text, passwordBoxPassword.Password))
+                {
+
+                    System.Windows.MessageBox.Show("Congratulation! You have successfully signed up for My Study Life.");
+
+                    View_home home = new View_home();
+                    App.Current.MainWindow = home;
+                    this.Close();
+                    home.Show();
+
+                }
+
+                else
+                {
+
+                    System.Windows.MessageBox.Show("Can not Sign Up because of a severe Database problem! Please try later.");
+
+                }
+
+
+            }
+
+            else
+            {
+
+                System.Windows.MessageBox.Show("Fields can not be empty. All fields are required. Please try again.");
+
+            }
             
             
         }
