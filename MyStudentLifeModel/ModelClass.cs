@@ -21,7 +21,15 @@ namespace MyStudentLifeModel
             {
 
                 
-
+dfgdffffffffffffffffffffffffffffffffffffffffffgdl/hdf
+df
+g
+df
+g
+dfg
+df
+g
+d
                 while (dataReader.Read())
                 {
 
