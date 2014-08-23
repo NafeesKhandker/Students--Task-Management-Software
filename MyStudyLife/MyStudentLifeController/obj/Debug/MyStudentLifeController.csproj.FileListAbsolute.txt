@@ -1,0 +1,5 @@
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeController\bin\Debug\MyStudentLifeController.dll
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeController\bin\Debug\MyStudentLifeController.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeController\obj\Debug\MyStudentLifeController.dll
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeController\obj\Debug\MyStudentLifeController.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeController\obj\Debug\MyStudentLifeController.csprojResolveAssemblyReference.cache

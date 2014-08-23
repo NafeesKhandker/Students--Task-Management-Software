@@ -1,0 +1,42 @@
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.pdb
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\App.g.cs
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife_MarkupCompile.cache
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.g.resources
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.Properties.Resources.resources
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csproj.GenerateResource.Cache
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
+C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignUp.baml
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignUp.g.cs
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_home.baml
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_home.g.cs
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_StartUp.baml
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_StartUp.g.cs
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignIn.baml
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignIn.g.cs
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudentLifeController.dll
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudentLifeModel.dll
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudentLifeController.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\bin\Debug\MyStudentLifeModel.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csprojResolveAssemblyReference.cache
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.pdb
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csprojResolveAssemblyReference.cache
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_home.baml
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_Home1.baml
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignIn.baml
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_StartUp.baml
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignUp.baml
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_home.g.cs
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_Home1.g.cs
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignIn.g.cs
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_StartUp.g.cs
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\View_SignUp.g.cs
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\App.g.cs
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife_MarkupCompile.cache
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.g.resources
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.Properties.Resources.resources
+D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csproj.GenerateResource.Cache

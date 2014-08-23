@@ -1,0 +1,13 @@
+https://github.com/NafeesKhandker/Student-Task-Management-Software.git
+
+How to clone?
+
+git clone @clone_address
+
+How to push:
+
+git init 
+git add MyStudyLife
+git commit -m "Nafees commit"
+git remote add origin git@https://github.com/NafeesKhandker/Student-Task-Management-Software.git
+git push -u origin master

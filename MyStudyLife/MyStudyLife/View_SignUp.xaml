@@ -1,0 +1,43 @@
+﻿<Window x:Class="MyStudyLife.View_SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sign Up" Height="609" Width="909" Name="WindowSignUp" Icon="/MyStudyLife;component/Images/Icon.ico" WindowStyle="ThreeDBorderWindow" Loaded="WindowSignUp_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid Name="gridSignUpMain" Height="575" Width="900">
+        <Grid Height="126" HorizontalAlignment="Left" Name="gridSignUpHeader" VerticalAlignment="Top" Width="899">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="627*" />
+                <ColumnDefinition Width="272*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/SignUpHeader.jpg" />
+            </Grid.Background>
+            <Button Content="Back" Height="32" HorizontalAlignment="Left" Margin="96,40,0,0" Name="buttonBack" VerticalAlignment="Top" Width="75" Background="#FF119677" Foreground="White" FontSize="15" FontWeight="Normal" BorderBrush="#FF5ED1AD" Click="buttonBack_Click" TabIndex="1" Grid.Column="1" />
+            <Button Content="Quit" Height="32" HorizontalAlignment="Right" Margin="0,40,20,0" Name="buttonQuit" VerticalAlignment="Top" Width="75" Foreground="White" Background="#FF119677" BorderBrush="#FF5ED1AD" FontSize="15" Click="buttonQuit_Click" TabIndex="2" Grid.Column="1" />
+        </Grid>
+        <Grid Height="453" HorizontalAlignment="Left" Margin="0,124,0,0" Name="gridSignUpBody" VerticalAlignment="Top" Width="900" Background="#FF454141">
+            <Label Content="Sign Up" Height="40" HorizontalAlignment="Left" Margin="146,0,0,0" Name="labelSignUp" VerticalAlignment="Top" Foreground="White" FontSize="22" Width="87" />
+            <TextBlock Height="52" HorizontalAlignment="Left" Margin="152,46,0,0" Name="textBlockSignUpDetails" Text="New to My Study Life? You can sign up for a My Study Life account below. If you'd rather sign in with a Google or Facebook account you can do that from the sign in screen on the web or mobile apps." VerticalAlignment="Top" TextWrapping="Wrap" Width="605" Foreground="White" />
+            <TextBox Height="31" HorizontalAlignment="Left" Margin="152,108,0,0" Name="textBoxFirstName" VerticalAlignment="Top" Width="292" Background="Black" Foreground="White" FontSize="15" FontStyle="Normal" FontWeight="Normal" SelectionBrush="White" BorderBrush="#FF6F6C6C" BorderThickness="1" Text="" TextChanged="textBoxFirstName_TextChanged" TabIndex="3"></TextBox>
+            <TextBox Background="Black" FontSize="15" FontStyle="Normal" FontWeight="Normal" Foreground="White" Height="31" HorizontalAlignment="Right" Margin="0,108,143,0" Name="textBoxLastName" SelectionBrush="White" VerticalAlignment="Top" Width="292" BorderBrush="#FF6F6C6C" Text="" TabIndex="4"></TextBox>
+            <TextBox Background="Black" FontSize="15" FontStyle="Normal" FontWeight="Normal" Foreground="White" Height="31" HorizontalAlignment="Left" Margin="152,183,0,0" Name="textBoxEmail" SelectionBrush="White" VerticalAlignment="Top" Width="292" BorderBrush="#FF6F6C6C" Text="" TextChanged="textBoxEmail_TextChanged" TabIndex="5"></TextBox>
+            <TextBox Background="Black" FontSize="15" FontStyle="Normal" FontWeight="Normal" Foreground="White" Height="31" HorizontalAlignment="Left" Margin="465,183,0,0" Name="textBoxConfirmEmail" SelectionBrush="White" VerticalAlignment="Top" Width="292" BorderBrush="#FF6F6C6C" Text="" TextChanged="textBoxConfirmEmail_TextChanged" TabIndex="6"></TextBox>
+            <PasswordBox Height="31" HorizontalAlignment="Left" Margin="152,253,0,0" Name="passwordBoxPassword" VerticalAlignment="Top" Width="292" Foreground="White" Background="Black" BorderBrush="#FF6F6C6C" PasswordChanged="passwordBoxPassword_PasswordChanged" Password="" FontSize="15" TabIndex="7"></PasswordBox>
+            <PasswordBox Background="Black" Foreground="White" Height="31" HorizontalAlignment="Right" Margin="0,253,143,0" Name="passwordBoxConfirmPassword" VerticalAlignment="Top" Width="292" BorderBrush="#FF6F6C6C" FontSize="15" PasswordChanged="passwordBoxConfirmPassword_PasswordChanged" TabIndex="8"></PasswordBox>
+            <Button Content="Sign Up" Height="32" HorizontalAlignment="Left" Margin="152,338,0,0" Name="buttonSignUp" VerticalAlignment="Top" Width="605" Background="#FF17765A" FontSize="14" Foreground="White" Click="buttonSignUp_Click" TabIndex="9">
+                <Button.BorderBrush>
+                    <SolidColorBrush />
+                </Button.BorderBrush>
+            </Button>
+            <Label Content="First Name" Height="28" HorizontalAlignment="Left" Margin="147,81,0,0" Name="labelFirstName" VerticalAlignment="Top" Foreground="#FF908A8A" FontSize="14" />
+            <Label Content="Last Name" FontSize="14" Foreground="#FF908A8A" Height="28" HorizontalAlignment="Left" Margin="460,81,0,0" Name="labelLastName" VerticalAlignment="Top" />
+            <Label Content="Email" FontSize="14" Foreground="#FF908A8A" Height="28" HorizontalAlignment="Left" Margin="147,156,0,0" Name="labelEmail" VerticalAlignment="Top" />
+            <Label Content="Confirm Email" FontSize="14" Foreground="#FF908A8A" Height="28" HorizontalAlignment="Left" Margin="461,156,0,0" Name="labelConfirmEmail" VerticalAlignment="Top" />
+            <Label Content="Password" FontSize="14" Foreground="#FF908A8A" Height="28" HorizontalAlignment="Left" Margin="147,226,0,0" Name="labelPassword" VerticalAlignment="Top" />
+            <Label Content="Confirm Password" FontSize="14" Foreground="#FF908A8A" Height="28" HorizontalAlignment="Left" Margin="460,226,0,0" Name="labelConfirmPassword" VerticalAlignment="Top" />
+            <Label Foreground="Red" Height="28" HorizontalAlignment="Left" Margin="147,208,0,0" Name="labelEmailAlert" VerticalAlignment="Top" FontSize="13" />
+            <Label Foreground="Red" Height="28" HorizontalAlignment="Left" Margin="460,208,0,0" Name="labelConfirmEmailAlert" VerticalAlignment="Top" FontSize="13" />
+            <Label Foreground="Red" Height="28" HorizontalAlignment="Right" Margin="0,280,143,0" Name="labelConfirmPasswordAlert" VerticalAlignment="Top" Width="297" FontSize="13" />
+            <TextBlock Height="53" HorizontalAlignment="Left" Margin="152,284,0,0" Name="textBlockPassword" Text="" VerticalAlignment="Top" TextWrapping="Wrap" Width="292" Foreground="Red" FontSize="13" />
+        </Grid>
+    </Grid>
+</Window>
