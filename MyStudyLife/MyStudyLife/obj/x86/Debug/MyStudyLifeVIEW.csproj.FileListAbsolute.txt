@@ -42,3 +42,5 @@ D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\My
 D:\Studies\Software Engineering\Project\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csproj.GenerateResource.Cache
 F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
 F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
+D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
