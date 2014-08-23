@@ -1,0 +1,12 @@
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeModel\bin\Debug\MyStudentLifeModel.dll
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeModel\bin\Debug\MyStudentLifeModel.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeModel\obj\Debug\MyStudentLifeModel.dll
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeModel\obj\Debug\MyStudentLifeModel.pdb
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeModel\obj\Debug\MyStudentLifeModel.csprojResolveAssemblyReference.cache
+C:\Users\Nafees Khandker\documents\visual studio 2010\Projects\MyStudyLife\MyStudentLifeModel\bin\Debug\MyStudentLifeModel.dll.config
+C:\Users\cat lover\Desktop\MyStudyLife\MyStudentLifeModel\bin\Debug\MyStudentLifeModel.dll.config
+C:\Users\cat lover\Desktop\MyStudyLife\MyStudentLifeModel\bin\Debug\MyStudentLifeModel.dll
+C:\Users\cat lover\Desktop\MyStudyLife\MyStudentLifeModel\bin\Debug\MyStudentLifeModel.pdb
+C:\Users\cat lover\Desktop\MyStudyLife\MyStudentLifeModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cat lover\Desktop\MyStudyLife\MyStudentLifeModel\obj\Debug\MyStudentLifeModel.dll
+C:\Users\cat lover\Desktop\MyStudyLife\MyStudentLifeModel\obj\Debug\MyStudentLifeModel.pdb
