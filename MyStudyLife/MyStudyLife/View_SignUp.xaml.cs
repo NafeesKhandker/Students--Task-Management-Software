@@ -50,6 +50,34 @@ namespace MyStudyLife
 
         private void passwordBoxPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            ControllerClass msController = new ControllerClass();
+
+            if (passwordBoxPassword.Password != "")
+            {
+
+                if (msController.IsValidPassword(passwordBoxPassword.Password))
+                {
+
+                    textBlockPassword.Foreground = Brushes.Green;
+                    textBlockPassword.Text = "Valid Password!";
+
+                }
+
+                else
+                {
+
+                    textBlockPassword.Foreground = Brushes.Red;
+                    textBlockPassword.Text = "Password must be atleast 6 characters, must contain at least one lower case letter, one upper case letter, one digit and one special character.";
+
+                }
+            }
+
+            else
+            {
+
+                textBlockPassword.Text = "";
+
+            }
 
            
         }
