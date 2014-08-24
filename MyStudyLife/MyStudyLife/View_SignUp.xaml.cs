@@ -196,6 +196,34 @@ namespace MyStudyLife
 
         private void passwordBoxConfirmPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            if (passwordBoxConfirmPassword.Password != "")
+            {
+
+                if (passwordBoxPassword.Password.Equals(passwordBoxConfirmPassword.Password))
+                {
+
+                    labelConfirmPasswordAlert.Foreground = Brushes.Green;
+                    labelConfirmPasswordAlert.Content = "Password Matches!";
+
+                }
+
+                else
+                {
+
+                    labelConfirmPasswordAlert.Foreground = Brushes.Red;
+                    labelConfirmPasswordAlert.Content = "Password does not Matches!";
+
+                }
+
+            }
+
+            else
+            {
+
+                labelConfirmPasswordAlert.Content = "";
+
+            }
+
 
             
 
