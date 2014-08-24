@@ -3,22 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="View_Home1" Height="507" Width="929" Loaded="Window_Loaded">
     <Grid>
-        <TabControl Height="377" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="907">
-            <TabItem Width="70" Height="70" IsEnabled="True" IsSelected="False" Name="TabItemHeader">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0*" />
-                        <ColumnDefinition Width="901*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Content="Label" HorizontalAlignment="Left" Name="label1" Width="96" Margin="126,0,0,191" Grid.Column="1" />
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="tabItem2" Name="tabItem2">
-                <Grid Height="331" />
-            </TabItem>
-            
-            
-        </TabControl>
+        <TabControl Height="377" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="907"></TabControl>
     </Grid>
 </Window>

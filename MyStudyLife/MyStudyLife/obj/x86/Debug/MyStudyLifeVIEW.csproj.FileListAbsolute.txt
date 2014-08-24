@@ -60,3 +60,5 @@ D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudy
 D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.g.resources
 D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.Properties.Resources.resources
 D:\Studies\Software Engineering\Project\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csproj.GenerateResource.Cache
+C:\Users\cat lover\Desktop\Student-Task-Management-Software\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
+C:\Users\cat lover\Desktop\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
