@@ -166,7 +166,31 @@ namespace MyStudyLife
 
         private void textBoxConfirmEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
+            if (textBoxConfirmEmail.Text != "")
+            {
+                if (textBoxEmail.Text.Equals(textBoxConfirmEmail.Text))
+                {
 
+                    labelConfirmEmailAlert.Foreground = Brushes.Green;
+                    labelConfirmEmailAlert.Content = "Email Matches!";
+
+                }
+
+                else
+                {
+
+                    labelConfirmEmailAlert.Foreground = Brushes.Red;
+                    labelConfirmEmailAlert.Content = "Email does not Matches!";
+
+                }
+            }
+
+            else
+            {
+
+                labelConfirmEmailAlert.Content = "";
+
+            }
             
         }
 
