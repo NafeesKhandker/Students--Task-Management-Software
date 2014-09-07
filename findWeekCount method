@@ -1,0 +1,19 @@
+public static int  findWeekCount(DateTime startDate, DateTime toDate, DayOfWeek Week)
+{
+    int _daysBetweenDates = (toDate - startDate).Days;  // days between start date and end date
+    int _adjustingDays = (7 + (int)Week - (int)startDate.DayOfWeek) % 7; // days between week of start date and searching week
+    int _oddDays = _daysBetweenDates % 7; // remainder of total days after dividing 7
+
+    int _completeWeekTurns = (_daysBetweenDates) / 7;
+    int _addTurns = _oddDays >= _adjustingDays  ? 1 : 0;
+ 
+    return _completeWeekTurns + _addTurns;
+}
+
+
+DateTime sDate = new DateTime(2011, 09, 1);
+DateTime eDate = new DateTime(2011, 11, 30);
+DayOfWeek fWeek = DayOfWeek.Monday;
+ 
+int totCount = findWeekCount(sDate, eDate, fWeek);
+MessageBox.Show(totCount.ToString()); //Result : 13 (Mondays)
