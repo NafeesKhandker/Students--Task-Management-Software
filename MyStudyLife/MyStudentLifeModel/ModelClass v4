@@ -1,0 +1,43 @@
+
+
+        
+
+        public DataTable PastTask()
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+
+                DateTime DateToday = DateTime.UtcNow.Date;
+                string query = "DECLARE @sDate Date SET @sDate = '" + DateToday.Date + "' SELECT Title, Subject, Type, DueDate FROM Tbl_Task WHERE DueDate < @sDate";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+                DataTable dataTbl = new DataTable("Tbl_Task");
+                dataAdp.Fill(dataTbl);
+                dataAdp.Update(dataTbl);
+                return dataTbl;
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+                return null;
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }
