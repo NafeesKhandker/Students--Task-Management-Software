@@ -46,7 +46,34 @@ namespace MyStudyLife
 
         }
 
-        
+        private void buttonDashBoard_Click(object sender, RoutedEventArgs e)
+        {
+            gridHome.Children.Clear();
+
+            UserControlDashBoard ucDashBoard = new UserControlDashBoard();
+            gridHome.Children.Add(ucDashBoard);
+        }
+
+        private void buttonTask_Click(object sender, RoutedEventArgs e)
+        {
+            gridHome.Children.Clear();
+            gridHome.Children.Add(gridHeader);
+            labelCurrent.Visibility = Visibility.Visible;
+            comboBoxCurrentTask.Visibility = Visibility.Visible;
+            comboBoxCurrentTask.SelectedIndex = 0;
+            buttonNew.Content = strNewTask;
+            labelHeader.Content = "Tasks";
+            labelCurrent.Content = "Tasks";
+            gridHome.Children.Add(gridFilter);
+            buttonNewAlt.Content = "New Task";
+            gridHome.Children.Add(gridNew);
+
+
+            RefreshDataCurrentTask();
+
+
+
+        }
 
         
     }
