@@ -158,6 +158,24 @@ namespace MyStudyLife
             }
         }
 
+        private void buttonExam_Click(object sender, RoutedEventArgs e)
+        {
+            labelHeader.Content = "Exams";
+            labelCurrent.Content = "Exams";
+            buttonNew.Content = strNewExam;
+            labelCurrent.Visibility = Visibility.Visible;
+            comboBoxCurrentTask.Visibility = Visibility.Visible;
+            comboBoxCurrentTask.SelectedIndex = 0;
+            gridHome.Children.Clear();
+            gridHome.Children.Add(gridHeader);
+            gridHome.Children.Add(gridFilter);
+            buttonNewAlt.Content = strNewExam;
+            gridHome.Children.Add(gridNew);
+
+            RefreshDataCurrentExam();
+
+        }
+
 
         
     }
