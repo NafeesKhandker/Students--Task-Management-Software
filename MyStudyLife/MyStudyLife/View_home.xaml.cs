@@ -192,6 +192,29 @@ namespace MyStudyLife
 
             RefreshDataClass();
         }
+
+	private void buttonNCSave_Click(object sender, RoutedEventArgs e)
+        {
+
+            ModelClass model = new ModelClass();
+            model.ClassInsertion(textBoxNCSubject.Text, textBoxNCModule.Text, textBoxNCRoom.Text, textBoxNCBuilding.Text, textBoxNCTeacher.Text, datePickerNCDate.Text, textBoxNCStartTime.Text, textBoxNCEndTime.Text);
+
+            RefreshClass();
+            RefreshDataClass();
+
+        }
+	
+	private void buttonNCCancel_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshClass();
+        }
+
+        private void buttonNECancel_Click(object sender, RoutedEventArgs e)
+        {
+
+            RefreshExam();
+        
+        }
         
     }
 }
