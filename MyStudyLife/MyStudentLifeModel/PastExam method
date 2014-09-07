@@ -1,0 +1,24 @@
+public DataTable PastExam()
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+               
+
+            }
+
+            catch (Exception e)
+            {
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }
