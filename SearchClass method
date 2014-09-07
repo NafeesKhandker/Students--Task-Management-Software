@@ -1,0 +1,37 @@
+  public DataTable SearchClass(string keyWord)
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+
+                string query = "(SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(Subject) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(Module) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(Room) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(Building) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(Teacher) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(Date) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(StartTime) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Room, Building, Teacher, Date, StartTime, EndTime FROM Tbl_Class WHERE UPPER(EndTime) LIKE '%" + keyWord + "%')";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+                DataTable dataTbl = new DataTable("Tbl_Class");
+                dataAdp.Fill(dataTbl);
+                dataAdp.Update(dataTbl);
+                return dataTbl;
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+                return null;
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }
