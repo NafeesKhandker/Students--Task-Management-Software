@@ -177,6 +177,21 @@ namespace MyStudyLife
         }
 
 
+	 private void buttonClasses_Click(object sender, RoutedEventArgs e)
+        {
+            labelHeader.Content = "Classes";
+            buttonNew.Content = strNewClass;
+            buttonNewAlt.Content = strNewClass;
+            labelCurrent.Visibility = Visibility.Hidden;
+            comboBoxCurrentTask.Visibility = Visibility.Hidden;
+  
+            gridHome.Children.Clear();
+            gridHome.Children.Add(gridHeader);
+            gridHome.Children.Add(gridFilter);
+            gridHome.Children.Add(gridNew);
+
+            RefreshDataClass();
+        }
         
     }
 }
