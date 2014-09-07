@@ -1,0 +1,38 @@
+public DataTable SearchExam(string keyWord)
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+
+                string query = "(SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(Subject) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(Module) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(Date) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(StartTime) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(Duration) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(Seat) LIKE '%" + keyWord + "%') UNION (SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE UPPER(Room) LIKE '%" + keyWord + "%')";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+                DataTable dataTbl = new DataTable("Tbl_Exam");
+                dataAdp.Fill(dataTbl);
+                dataAdp.Update(dataTbl);
+                return dataTbl;
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+                return null;
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }
