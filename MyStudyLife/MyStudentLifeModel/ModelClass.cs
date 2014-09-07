@@ -94,6 +94,44 @@ namespace MyStudentLifeModel
 
         }
 
+        public DataTable FilterTask(string subject)
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+
+                string query = "SELECT Title, Subject, Type, DueDate FROM Tbl_Task WHERE UPPER(Subject) LIKE '%" + subject + "%'";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+                DataTable dataTbl = new DataTable("Tbl_Task");
+                dataAdp.Fill(dataTbl);
+                dataAdp.Update(dataTbl);
+                return dataTbl;
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+                return null;
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }
         
     }
 }

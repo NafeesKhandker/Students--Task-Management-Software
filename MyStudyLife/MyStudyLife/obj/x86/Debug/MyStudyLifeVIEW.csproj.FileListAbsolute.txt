@@ -52,3 +52,6 @@ C:\Users\Nafees Khandker\Desktop\Student-Task-Management-Software\MyStudyLife\My
 C:\Users\Nafees Khandker\Desktop\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.g.resources
 C:\Users\Nafees Khandker\Desktop\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.Properties.Resources.resources
 C:\Users\Nafees Khandker\Desktop\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLifeVIEW.csproj.GenerateResource.Cache
+F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\bin\Debug\MyStudyLife.exe.config
+F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.exe
+F:\SE\Student-Task-Management-Software\MyStudyLife\MyStudyLife\obj\x86\Debug\MyStudyLife.pdb
