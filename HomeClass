@@ -1,0 +1,93 @@
+       public void RefreshExam()
+        {
+
+            labelHeader.Content = "Exams";
+            labelCurrent.Content = "Exams";
+            buttonNew.Content = strNewExam;
+            labelCurrent.Visibility = Visibility.Visible;
+            comboBoxCurrentTask.Visibility = Visibility.Visible;
+            gridHome.Children.Clear();
+            gridHome.Children.Add(gridHeader);
+            gridHome.Children.Add(gridFilter);
+            buttonNewAlt.Content = strNewExam;
+            gridHome.Children.Add(gridNew);
+        
+        }
+
+        public void RefreshClass()
+        { 
+            labelHeader.Content = "Classes";
+            buttonNew.Content = strNewClass;
+            buttonNewAlt.Content = strNewClass;
+            labelCurrent.Visibility = Visibility.Hidden;
+            comboBoxCurrentTask.Visibility = Visibility.Hidden;
+
+            gridHome.Children.Clear();
+            gridHome.Children.Add(gridHeader);
+            gridHome.Children.Add(gridFilter);
+            gridHome.Children.Add(gridNew);
+        
+        }
+
+
+        public void RefreshDataCurrentTask()
+        {
+
+            ModelClass refreshModel = new ModelClass();
+            DataTable dataTbl = refreshModel.OverDueCurrentTask();
+            dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+        
+        }
+
+        public void RefreshDataPastTask()
+        {
+
+            ModelClass refreshModel = new ModelClass();
+            DataTable dataTbl = refreshModel.PastTask();
+            dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+        
+        }
+
+        public void RefreshDataCurrentExam()
+        {
+            ModelClass refreshModel = new ModelClass();
+            DataTable dataTbl = refreshModel.OverDueCurrentExam();
+            dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+        }
+
+        public void RefreshDataPastExam()
+        {
+            ModelClass refreshModel = new ModelClass();
+            DataTable dataTbl = refreshModel.PastExam();
+            dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+        }
+
+        public void RefreshDataClass()
+        {
+            ModelClass refreshModel = new ModelClass();
+            DataTable dataTbl = refreshModel.OverDueClass();
+            dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+
+        }
+
+        private void textBoxFilterBySubject_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            ModelClass modelFilter = new ModelClass();
+            if (buttonNew.Content == strNewTask)
+            {
+                DataTable dataTbl = modelFilter.FilterTask(textBoxFilterBySubject.Text);
+                dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+            }
+            else if (buttonNew.Content == strNewExam)
+            {
+                DataTable dataTbl = modelFilter.FilterExam(textBoxFilterBySubject.Text);
+                dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+            }
+
+            else if (buttonNew.Content == strNewClass)
+            {
+                DataTable dataTbl = modelFilter.FilterClass(textBoxFilterBySubject.Text);
+                dataGridOverDue.ItemsSource = dataTbl.DefaultView;
+            }
+        }
