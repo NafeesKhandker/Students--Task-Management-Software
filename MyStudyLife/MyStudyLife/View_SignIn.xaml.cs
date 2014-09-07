@@ -40,10 +40,11 @@ namespace MyStudyLife
                     break;
 
                 case 1:
-                    View_home home = new View_home();
+                    View_Home home = new View_Home();
                     App.Current.MainWindow = home;
                     this.Close();
                     home.Show();
+                    model.UserKey(textBoxEmail.Text);
                     break;
 
                 case 911:
@@ -72,11 +73,6 @@ namespace MyStudyLife
             {
                 Process.GetCurrentProcess().Kill();
             }
-        }
-
-        private void WnidowSignIn_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -66,11 +66,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View_home.xaml.cs">
-      <DependentUpon>View_home.xaml</DependentUpon>
+    <Compile Include="UserControlDashBoard.xaml.cs">
+      <DependentUpon>UserControlDashBoard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View_Home1.xaml.cs">
-      <DependentUpon>View_Home1.xaml</DependentUpon>
+    <Compile Include="UserControlSearch.xaml.cs">
+      <DependentUpon>UserControlSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_Home.xaml.cs">
+      <DependentUpon>View_Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="View_SignIn.xaml.cs">
       <DependentUpon>View_SignIn.xaml</DependentUpon>
@@ -108,11 +111,15 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View_home.xaml">
+    <Page Include="UserControlDashBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View_Home1.xaml">
+    <Page Include="UserControlSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View_Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,6 +196,18 @@
       <Project>{36409CBE-B946-4FDF-96EE-F4D67BC3FE92}</Project>
       <Name>MyStudentLifeModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NewTask.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\imageClasses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\iconExam.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\iconClass.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="MyStudyLife.UserControlDashBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="456" d:DesignWidth="945" Height="659" Width="945">
+    <Grid Width="944" Height="659" Background="#FFE8E8E8" Name="gridUCDashBoard">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="720*" />
+            <ColumnDefinition Width="225*" />
+        </Grid.ColumnDefinitions>
+        <Rectangle Height="411" HorizontalAlignment="Left" Margin="84,44,0,0" Name="rectangle1" VerticalAlignment="Top" Width="385" Fill="White">
+            <Rectangle.Stroke>
+                <SolidColorBrush />
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle Fill="#FF149A92" Height="123" HorizontalAlignment="Left" Margin="84,506,0,0" Name="rectangle3" VerticalAlignment="Top" Width="385">
+            <Rectangle.Stroke>
+                <SolidColorBrush />
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle Fill="#FF235289" Height="123" HorizontalAlignment="Left" Margin="490,506,0,0" Name="rectangle4" VerticalAlignment="Top" Width="385" Grid.ColumnSpan="2">
+            <Rectangle.Stroke>
+                <SolidColorBrush />
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle Fill="#FF4A8D78" Height="123" HorizontalAlignment="Left" Margin="490,44,0,0" Name="rectangle5" VerticalAlignment="Top" Width="385" Grid.ColumnSpan="2">
+            <Rectangle.Stroke>
+                <SolidColorBrush />
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle Fill="White" Height="268" HorizontalAlignment="Left" Margin="490,187,0,0" Name="rectangle2" VerticalAlignment="Top" Width="385" Grid.ColumnSpan="2">
+            <Rectangle.Stroke>
+                <SolidColorBrush />
+            </Rectangle.Stroke>
+        </Rectangle>
+    </Grid>
+</UserControl>

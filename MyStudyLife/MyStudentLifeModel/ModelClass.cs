@@ -11,7 +11,16 @@ namespace MyStudentLifeModel
     public class ModelClass
     {
 
+        public static string userEmail = "nafees.ku11@gmail.com";
         public string connectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Nafees Khandker\Documents\Visual Studio 2010\Projects\MyStudyLife\MyStudentLifeModel\DBMyStudyLife.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+
+        public void UserKey(string email)
+        {
+
+            userEmail = email;
+        
+        }
+
 
         public bool SignUpInsertion(string firstName, string lastName, string email, string password)
         {
@@ -19,13 +28,13 @@ namespace MyStudentLifeModel
             try
             {
 
-                string query = "INSERT INTO Tbl_SignUpInfo (First_Name, Last_Name, Email, Password) VALUES ('" + firstName + "', '" + lastName + "' , '" + email + "', '" + password + "')";
+                string query = "INSERT INTO Tbl_SignUpInfo (First_Name, Last_Name, Email, Password) VALUES ('"+firstName+"', '"+lastName+"' , '"+email+"', '"+password+"')";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                return true;
-
+                return true;    
+                
             }
 
             catch (Exception e)
@@ -33,7 +42,7 @@ namespace MyStudentLifeModel
 
                 conn.Close();
                 return false;
-
+               
             }
 
             finally
@@ -52,8 +61,8 @@ namespace MyStudentLifeModel
             try
             {
 
-                string query = "SELECT First_Name, Last_Name, Email, Password FROM Tbl_SignUpInfo WHERE (Email = '" + email + "') AND (Password = '" + password + "')";
-
+                string query = "SELECT First_Name, Last_Name, Email, Password FROM Tbl_SignUpInfo WHERE (Email = '"+email+"') AND (Password = '"+password+"')";
+              
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader;
                 conn.Open();
@@ -80,9 +89,11 @@ namespace MyStudentLifeModel
             {
 
                 conn.Close();
-
+            
             }
 
         }
+
+        
     }
 }

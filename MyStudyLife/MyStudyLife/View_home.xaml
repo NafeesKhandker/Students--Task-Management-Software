@@ -1,136 +1,146 @@
-﻿<Window x:Class="MyStudyLife.View_home"
+﻿<Window x:Class="MyStudyLife.View_Home"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="My Study Life" Height="698" Width="1024" Name="WindowHome" Loaded="WindowHome_Loaded">
-    <Grid Name="gridMain">
-        <TabControl TabStripPlacement="Left" Name="TabControlWidget" SelectionChanged="TabControlWidget_SelectionChanged">
-            <TabControl.Resources>
-                <Style TargetType="TabItem" x:Key="SideBarSectionStyle">
-                    <Setter Property="IsEnabled" Value="False" />
-                    <Setter Property="FontSize" Value="16" />
-                    <Setter Property="Foreground" Value="LightGreen" />
-                </Style>
-            </TabControl.Resources>
-            
-           
-            
-            <TabItem Width="70" Height="70" IsEnabled="True" IsSelected="False" Name="TabItemHeader">
-                <TabItem.Background>
-                    <ImageBrush ImageSource="/MyStudyLife;component/Images/icon.jpg" />
-                </TabItem.Background>
-            </TabItem>
-
-            
-            <TabItem Height="70" Width="70" IsSelected="True" DataContext="{Binding}" Name="TabItemDashboard" Background="#FF2B2B2B">
-
-                <TabItem.Style>
-                    <Style TargetType="TabItem">
-                        <Setter Property="Header">
-                            <Setter.Value>
-                                <Image Source="/MyStudyLife;component/Images/DashboardSelected.jpg" Stretch="Uniform" ImageFailed="Image_ImageFailed_4" />
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Header">
-                                    <Setter.Value>
-                                        <Image Source="/MyStudyLife;component/Images/DashboardSelected.jpg"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </TabItem.Style>
-            </TabItem>
-
-            <TabItem Height="70" Width="70" Name="TabItemCalendar" DataContext="{Binding}" Background="#FF2B2B2B">
-
-
-                <TabItem.Style>
-                    <Style TargetType="TabItem">
-                        <Setter Property="Header">
-                            <Setter.Value>
-                                <Image Source="/MyStudyLife;component/Images/PhotoCalendar.jpg" Stretch="Uniform" ImageFailed="Image_ImageFailed_3" />
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Header">
-                                    <Setter.Value>
-                                        <Image Source="/MyStudyLife;component/Images/PhotoCalendar.jpg"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </TabItem.Style>
-            </TabItem>
-
-
-            <TabItem Height="70" Width="70" Name="TabItemTasks" DataContext="{Binding}" Background="#FF2B2B2B" >
-                <TabItem.Style>
-                    <Style TargetType="TabItem">
-                        <Setter Property="Header">
-                            <Setter.Value>
-                                <Image Source="/MyStudyLife;component/Images/PhotoTasks.jpg" Stretch="Uniform" />
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Header">
-                                    <Setter.Value>
-                                        <Image Source="/MyStudyLife;component/Images/PhotoTasks.jpg"/>
-                                    </Setter.Value>
-                                </Setter>
-                           </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </TabItem.Style>
-            </TabItem>
-
-            <TabItem Height="70" Width="70" Name="TabItemExams" DataContext="{Binding}" Background="#FF2B2B2B" >
-
-                <TabItem.Style>
-                    <Style TargetType="TabItem">
-                        <Setter Property="Header">
-                            <Setter.Value>
-                                <Image Source="/MyStudyLife;component/Images/PhotoExams.jpg" Stretch="Uniform"/>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Header">
-                                    <Setter.Value>
-                                        <Image Source="/MyStudyLife;component/Images/PhotoExams.jpg"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </TabItem.Style>
-            </TabItem>
-            <TabItem Height="70" Width="70" Name="TabItemSearch" DataContext="{Binding}" Background="#FF2B2B2B">
-
-                <TabItem.Style>
-                    <Style TargetType="TabItem">
-                        <Setter Property="Header">
-                            <Setter.Value>
-                                <Image Source="/MyStudyLife;component/Images/PhotoSearch.jpg" Stretch="Uniform"/>
-                            </Setter.Value>
-                        </Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Header">
-                                    <Setter.Value>
-                                        <Image Source="/MyStudyLife;component/Images/PhotoSearch.jpg"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </TabItem.Style>
-            </TabItem>
-
-        </TabControl>
+        Title="MyStudyLife" Height="698" Width="1024" Loaded="Window_Loaded" ResizeMode="CanMinimize" Name="WindowHome" Icon="/MyStudyLife;component/Images/Icon.ico">
+    <Grid Name="grid_Home" Width="1012">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="647*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition Width="164*" />
+            <ColumnDefinition Width="24*" />
+            <ColumnDefinition Width="824*" />
+        </Grid.ColumnDefinitions>
+        <Button Height="70" HorizontalAlignment="Left" Margin="-4,128,0,0" Name="buttonCalender" VerticalAlignment="Top" Width="70" Click="buttonCalender_Click" Grid.Row="1" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/PhotoCalendar.jpg" />
+            </Button.Background>
+        </Button>
+        <Button Height="70" HorizontalAlignment="Left" Name="buttonDashBoard" VerticalAlignment="Top" Width="72" Margin="-5,58,0,0" Grid.ColumnSpan="2" Click="buttonDashBoard_Click" Grid.Row="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/DashboardSelected.jpg" />
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+        </Button>
+        <Image Height="70" HorizontalAlignment="Left" Name="imageHome" Stretch="Fill" VerticalAlignment="Top" Width="70" Source="/MyStudyLife;component/Images/icon.jpg" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="-4,0,0,0" />
+        <Button Height="70" HorizontalAlignment="Left" Margin="-4,199,0,0" Name="buttonTask" VerticalAlignment="Top" Width="70" Click="buttonTask_Click" Grid.Row="1" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/PhotoTasks.jpg" />
+            </Button.Background>
+        </Button>
+        <Button Height="70" HorizontalAlignment="Left" Margin="-5,270,0,0" Name="buttonExam" VerticalAlignment="Top" Width="70" Grid.Row="1" Grid.ColumnSpan="2" Click="buttonExam_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/PhotoExams.jpg" />
+            </Button.Background>
+        </Button>
+        <Button Height="70" HorizontalAlignment="Left" Margin="-4,412,0,0" Name="buttonSearch" VerticalAlignment="Top" Width="70" Grid.Row="1" Click="buttonSearch_Click" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/PhotoSearch.jpg" />
+            </Button.Background>
+        </Button>
+        <Grid Height="659" HorizontalAlignment="Left" Margin="69,0,0,0" Name="gridHome" VerticalAlignment="Top" Width="944" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Grid Height="592" HorizontalAlignment="Left" Margin="462,68,0,0" Name="gridNewTask" VerticalAlignment="Top" Width="467" Background="#FFE8E8E8">
+                <Button Background="White" Content="Cancel" FontSize="16" Height="40" HorizontalAlignment="Left" Margin="306,514,0,0" Name="buttonNTCancel" VerticalAlignment="Top" Width="82" Click="buttonNTCancel_Click"/>
+                <Button Background="#FF149A92" Content="Save" FontSize="16" Foreground="White" Height="40" HorizontalAlignment="Right" Margin="0,514,11,0" Name="buttonNTSave" VerticalAlignment="Top" Width="62" Click="buttonNTSave_Click" />
+                <Rectangle Height="61" HorizontalAlignment="Left" Name="rectangleNewTask" Stroke="#FFBAB1B1" StrokeThickness="0.5" VerticalAlignment="Top" Width="465" Margin="1,-1,0,0" />
+                <Image Height="44" HorizontalAlignment="Left" Margin="10,10,0,0" Name="imageNewTask" Source="/MyStudyLife;component/Images/NewTask.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45" />
+                <Label Content="New Task" FontSize="24" Height="45" HorizontalAlignment="Left" Margin="64,10,0,0" Name="labelNewTask" VerticalAlignment="Top" Width="125" />
+                <Label Content="Subject" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="6,68,0,0" Name="labelNTSubject" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,111,0,0" Name="textBoxNTSubject" VerticalAlignment="Top" Width="213" />
+                <Label Content="Type" FontSize="16" Height="36" HorizontalAlignment="Right" Margin="0,68,193,0" Name="labelNTType" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="243,111,0,0" Name="textBoxNTType" VerticalAlignment="Top" Width="213" />
+                <Label Content="Due Date" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="4,160,0,0" Name="labelNTDueDate" VerticalAlignment="Top" />
+                <DatePicker FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,202,0,0" Name="datePickerNT" VerticalAlignment="Top" Width="199" />
+                <Label Content="Title" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="4,249,0,0" Name="labelNTTitle" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,291,0,0" Name="textBoxNTTitle" VerticalAlignment="Top" Width="447" />
+                <Label Content="Detail" FontSize="16" Height="32" HorizontalAlignment="Left" Margin="4,339,0,0" Name="labelNTDetail" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="104" HorizontalAlignment="Left" Margin="10,377,0,0" Name="textBoxNTDetail" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" />
+            </Grid>
+            <Grid Height="592" HorizontalAlignment="Left" Margin="-3,67,0,0" Name="gridFilter" VerticalAlignment="Top" Width="466" Background="#FFF8F8F8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="269*" />
+                    <ColumnDefinition Width="197*" />
+                </Grid.ColumnDefinitions>
+                <ComboBox Height="42" FontSize="16" HorizontalAlignment="Right" Margin="0,35,5,0" Name="comboBoxCurrentTask" VerticalAlignment="Top" Background="White" BorderBrush="White" SelectionChanged="comboBoxCurrentTask_SelectionChanged" Width="132" Grid.Column="1" Foreground="#FF020202" HorizontalContentAlignment="Center">
+                    <ComboBoxItem Content="Current" FontSize="16"/>
+                    <ComboBoxItem Content="Past" FontSize="16"/>
+                </ComboBox>
+                <Label Content="Filter By Subject" FontSize="16" Foreground="#FFBAB1B1" Height="35" HorizontalAlignment="Left" Margin="3,1,0,0" Name="labelFilterBySubject" VerticalAlignment="Top" />
+                <Label Content="Tasks" FontSize="16" Foreground="White" Height="30" HorizontalAlignment="Center" Margin="60,3,5,0" Name="labelCurrent" VerticalAlignment="Top" Background="#FF29AA94" Width="132" HorizontalContentAlignment="Center" FontStretch="Normal" Grid.Column="1" />
+                <Label FontSize="16" Foreground="#FFBAB1B1" Height="35" HorizontalAlignment="Left" Margin="3,77,0,0" Name="labelOverDue" VerticalAlignment="Top" Content="Over Due" />
+                <TextBox Height="42" HorizontalAlignment="Stretch" Margin="8,35,136,515" Name="textBoxFilterBySubject" VerticalAlignment="Stretch" Grid.ColumnSpan="2" TextChanged="textBoxFilterBySubject_TextChanged" FontSize="16" />
+                <DataGrid AutoGenerateColumns="True" Height="483" HorizontalAlignment="Left" Margin="5,109,0,0" Name="dataGridOverDue" VerticalAlignment="Top" Width="456" Grid.ColumnSpan="2" ColumnWidth="*" HorizontalGridLinesBrush="#FF4B4B4B" VerticalGridLinesBrush="#FF4B4B4B" AlternatingRowBackground="#FFBAB1B1" RowBackground="#FF29AA94" BorderBrush="#FFBAB1B1" RowHeight="50" FontSize="12" CanUserAddRows="True">
+                    
+                </DataGrid>
+            </Grid>
+            <Grid Height="50" HorizontalAlignment="Left" Margin="4,12,0,0" Name="gridHeader" VerticalAlignment="Top" Width="925">
+                <Label Content="Tasks" FontSize="26" FontWeight="Normal" Foreground="#FF0F857F" Height="49" HorizontalAlignment="Left" Name="labelHeader" VerticalAlignment="Top" Width="115" />
+                <Button Content="Button" Height="35" HorizontalAlignment="Left" Margin="833,6,0,0" Name="buttonNew" VerticalAlignment="Top" Width="91" Click="buttonNew_Click" Background="#FF29AA94" FontSize="16" Foreground="White" />
+            </Grid>
+            <Grid Height="592" HorizontalAlignment="Left" Margin="464,69,0,0" Name="gridExam" VerticalAlignment="Top" Width="467" Background="#FFE8E8E8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18*" />
+                    <ColumnDefinition Width="449*" />
+                </Grid.ColumnDefinitions>
+                <Rectangle Height="61" HorizontalAlignment="Left" Margin="1,-2,0,0" Name="rectangleNewExam" Stroke="#FFBAB1B1" StrokeThickness="0.5" VerticalAlignment="Top" Width="465" Grid.ColumnSpan="2" />
+                <Label Content="New Exam" FontSize="24" Height="45" HorizontalAlignment="Left" Margin="48,6,0,0" Name="labelNewExam" VerticalAlignment="Top" Width="125" Grid.Column="1" />
+                <Image Height="44" HorizontalAlignment="Left" Margin="8,7,0,0" Name="image1" Source="/MyStudyLife;component/Images/iconExam.bmp" Stretch="Fill" VerticalAlignment="Top" Width="45" Grid.ColumnSpan="2" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="11,109,0,0" Name="textBoxNESubject" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" />
+                <Label Content="Subject" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="7,67,0,0" Name="labelNESubject" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="12,199,0,0" Name="textBoxNEModule" VerticalAlignment="Top" Width="213" Grid.ColumnSpan="2" />
+                <Label Content="Module" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="8,157,0,0" Name="labelNEModule" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                <DatePicker FontSize="16" Height="42" HorizontalAlignment="Left" Margin="223,199,0,0" Name="datePickerNEDate" VerticalAlignment="Top" Width="213" Grid.Column="1" />
+                <Label Content="Date" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="218,157,0,0" Name="labelNEDate" VerticalAlignment="Top" Grid.Column="1" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="12,289,0,0" Name="textBoxNEStartTime" VerticalAlignment="Top" Width="141" Grid.ColumnSpan="2" />
+                <Label Content="StartTime" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="7,248,0,0" Name="labelNEStartTime" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="223,289,0,0" Name="textBoxNEDuration" VerticalAlignment="Top" Width="76" Grid.Column="1" />
+                <Label Content="Duration" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="218,248,0,0" Name="labelNEDuration" VerticalAlignment="Top" Grid.Column="1" />
+                <Label Content="minutes" FontSize="14" Height="36" HorizontalAlignment="Left" Margin="299,292,0,0" Name="labelNEMinutes" VerticalAlignment="Top" Foreground="#FFAC9B9B" Background="#FFE8E8E8" Grid.Column="1" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="12,378,0,0" Name="textBoxNESeat" VerticalAlignment="Top" Width="76" Grid.ColumnSpan="2" />
+                <Label Content="Seat" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="8,337,0,0" Name="labelNESeat" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="223,378,0,0" Name="textBoxNERoom" VerticalAlignment="Top" Width="213" Grid.Column="1" />
+                <Label Content="Room" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="218,337,0,0" Name="labelNERoom" VerticalAlignment="Top" Grid.Column="1" />
+                <Button Background="White" Content="Cancel" FontSize="16" Height="40" HorizontalAlignment="Left" Margin="286,521,0,0" Name="buttonNECancel" VerticalAlignment="Top" Width="82" Grid.Column="1" Click="buttonNECancel_Click"/>
+                <Button Background="#FF149A92" Content="Save" FontSize="16" Foreground="White" Height="40" HorizontalAlignment="Right" Margin="0,521,13,0" Name="buttonNESave" VerticalAlignment="Top" Width="62" Grid.Column="1" Click="buttonNESave_Click" />
+            </Grid>
+            <Grid Height="592" HorizontalAlignment="Left" Margin="464,69,0,0" Name="gridClass" VerticalAlignment="Top" Width="467" Background="#FFE8E8E8">
+                <Rectangle Height="61" HorizontalAlignment="Left" Margin="-3,1,0,0" Name="rectangleNewClass" Stroke="#FFBAB1B1" StrokeThickness="0.5" VerticalAlignment="Top" Width="465" />
+                <Label Content="New Class" FontSize="24" Height="45" HorizontalAlignment="Left" Margin="68,7,0,0" Name="labelNewClass" VerticalAlignment="Top" Width="125" />
+                <Image Height="44" HorizontalAlignment="Left" Margin="10,10,0,0" Name="image2" Source="/MyStudyLife;component/Images/iconClass.jpg" Stretch="Fill" VerticalAlignment="Top" Width="45" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,107,0,0" Name="textBoxNCSubject" VerticalAlignment="Top" Width="213" />
+                <Label Content="Subject" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="6,67,0,0" Name="labelNCSubject" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="245,107,0,0" Name="textBoxNCModule" VerticalAlignment="Top" Width="213" />
+                <Label Content="Module" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="241,67,0,0" Name="labelNCModule" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,197,0,0" Name="textBoxNCRoom" VerticalAlignment="Top" Width="213" />
+                <Label Content="Room" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="6,156,0,0" Name="labelNCRoom" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="241,197,0,0" Name="textBoxNCBuilding" VerticalAlignment="Top" Width="213" />
+                <Label Content="Building" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="241,156,0,0" Name="labelNCBuilding" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,286,0,0" Name="textBoxNCTeacher" VerticalAlignment="Top" Width="213" />
+                <Label Content="Teacher" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="6,245,0,0" Name="labelNCTeacher" VerticalAlignment="Top" />
+                <DatePicker FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,374,0,0" Name="datePickerNCDate" VerticalAlignment="Top" Width="213" />
+                <Label Content="Date" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="6,333,0,0" Name="labelNCDate" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="10,464,0,0" Name="textBoxNCStartTime" VerticalAlignment="Top" Width="134" />
+                <Label Content="Start Time" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="6,422,0,0" Name="labelNCStartTime" VerticalAlignment="Top" />
+                <TextBox FontSize="16" Height="42" HorizontalAlignment="Left" Margin="245,464,0,0" Name="textBoxNCEndTime" VerticalAlignment="Top" Width="134" />
+                <Label Content="End Time" FontSize="16" Height="36" HorizontalAlignment="Left" Margin="245,422,0,0" Name="labelNCEndTime" VerticalAlignment="Top" />
+                <Button Background="#FF149A92" Content="Save" FontSize="16" Foreground="White" Height="40" HorizontalAlignment="Right" Margin="0,537,13,0" Name="buttonNCSave" VerticalAlignment="Top" Width="62" Click="buttonNCSave_Click" />
+                <Button Background="White" Content="Cancel" FontSize="16" Height="40" HorizontalAlignment="Left" Margin="304,537,0,0" Name="buttonNCCancel" VerticalAlignment="Top" Width="82" Click="buttonNCCancel_Click" />
+            </Grid>
+            <Grid Height="592" HorizontalAlignment="Left" Margin="459,69,0,0" Name="gridNew" VerticalAlignment="Top" Width="467" Background="#FFE8E8E8">
+                <Button Background="#FF29AA94" Content="Button" FontSize="16" Foreground="White" Height="35" HorizontalAlignment="Left" Margin="183,292,0,0" Name="buttonNewAlt" VerticalAlignment="Top" Width="102" Click="buttonNewAlt_Click" />
+            </Grid>
+        </Grid>
+        <Button HorizontalAlignment="Left" Margin="-4,341,0,0" Name="buttonClasses" Width="70" Grid.Row="1" Click="buttonClasses_Click" VerticalAlignment="Top" Height="70" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/MyStudyLife;component/Images/imageClasses.jpg" />
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

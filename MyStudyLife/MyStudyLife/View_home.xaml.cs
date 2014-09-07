@@ -10,45 +10,44 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MyStudentLifeModel;
+using System.Data;
 
 namespace MyStudyLife
 {
     /// <summary>
-    /// Interaction logic for View_home.xaml
+    /// Interaction logic for View_Home1.xaml
     /// </summary>
-    public partial class View_home : Window
+    public partial class View_Home : Window
     {
-        public View_home()
+
+        public string strNewTask = "New Task";
+        public string strNewExam = "New Exam";
+        public string strNewClass = "New Class";
+
+        public View_Home()
         {
             InitializeComponent();
-           
+            gridHome.Children.Clear();
+
+            gridHome.Children.Clear();
+
+            UserControlDashBoard ucDashBoard = new UserControlDashBoard();
+            gridHome.Children.Add(ucDashBoard);
         }
 
-        private void TabControlWidget_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Image_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        private void buttonCalender_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Image_ImageFailed_1(object sender, ExceptionRoutedEventArgs e)
-        {
+        
 
-        }
-
-        private void Image_ImageFailed_2(object sender, ExceptionRoutedEventArgs e)
-        {
-
-        }
-
-        private void WindowHome_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-       
+        
     }
 }

@@ -50,6 +50,7 @@ namespace MyStudyLife
 
         private void passwordBoxPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
+
             ControllerClass msController = new ControllerClass();
 
             if (passwordBoxPassword.Password != "")
@@ -79,7 +80,6 @@ namespace MyStudyLife
 
             }
 
-           
         }
 
         private void textBoxFirstName_TextChanged(object sender, TextChangedEventArgs e)
@@ -94,6 +94,7 @@ namespace MyStudyLife
 
         private void buttonSignUp_Click(object sender, RoutedEventArgs e)
         {
+
             if (textBoxFirstName.Text != "" && textBoxLastName.Text != "" && textBoxEmail.Text != "" && textBoxConfirmEmail.Text != "" && passwordBoxPassword.Password != "" && passwordBoxConfirmPassword.Password != "")
             {
 
@@ -103,8 +104,8 @@ namespace MyStudyLife
                 {
 
                     System.Windows.MessageBox.Show("Congratulation! You have successfully signed up for My Study Life.");
-
-                    View_home home = new View_home();
+                    
+                    View_Home home = new View_Home();
                     App.Current.MainWindow = home;
                     this.Close();
                     home.Show();
@@ -115,7 +116,7 @@ namespace MyStudyLife
                 {
 
                     System.Windows.MessageBox.Show("Can not Sign Up because of a severe Database problem! Please try later.");
-
+                
                 }
 
 
@@ -125,9 +126,8 @@ namespace MyStudyLife
             {
 
                 System.Windows.MessageBox.Show("Fields can not be empty. All fields are required. Please try again.");
-
-            }
             
+            }
             
         }
 
@@ -162,12 +162,11 @@ namespace MyStudyLife
 
             }
 
-           
-
         }
 
         private void textBoxConfirmEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
+
             if (textBoxConfirmEmail.Text != "")
             {
                 if (textBoxEmail.Text.Equals(textBoxConfirmEmail.Text))
@@ -193,11 +192,11 @@ namespace MyStudyLife
                 labelConfirmEmailAlert.Content = "";
 
             }
-            
         }
 
         private void passwordBoxConfirmPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
+
             if (passwordBoxConfirmPassword.Password != "")
             {
 
@@ -223,11 +222,10 @@ namespace MyStudyLife
             {
 
                 labelConfirmPasswordAlert.Content = "";
-
+            
             }
 
 
-            
 
         }
 

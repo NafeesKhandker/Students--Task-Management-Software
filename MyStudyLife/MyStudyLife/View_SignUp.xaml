@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MyStudyLife.View_SignUp"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Sign Up" Height="609" Width="909" Name="WindowSignUp" Icon="/MyStudyLife;component/Images/Icon.ico" WindowStyle="ThreeDBorderWindow" Loaded="WindowSignUp_Loaded" WindowStartupLocation="CenterScreen">
+        Title="Sign Up" Height="609" Width="909" Name="WindowSignUp" ResizeMode="CanMinimize" Icon="/MyStudyLife;component/Images/Icon.ico" WindowStyle="ThreeDBorderWindow" Loaded="WindowSignUp_Loaded" WindowStartupLocation="CenterScreen">
     <Grid Name="gridSignUpMain" Height="575" Width="900">
         <Grid Height="126" HorizontalAlignment="Left" Name="gridSignUpHeader" VerticalAlignment="Top" Width="899">
             <Grid.ColumnDefinitions>

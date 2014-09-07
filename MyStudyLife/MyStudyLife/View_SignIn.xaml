@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MyStudyLife.View_SignIn"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Sign In" Height="669" Width="390" Name="WnidowSignIn" Loaded="WnidowSignIn_Loaded">
+        Title="Sign In" Height="669" Width="390" ResizeMode="CanMinimize" Name="WnidowSignIn">
     <Grid Name="gridMain" Width="Auto" Background="#FF454141">
         <Grid Height="180" HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top" Width="376">
             <Grid.Background>
