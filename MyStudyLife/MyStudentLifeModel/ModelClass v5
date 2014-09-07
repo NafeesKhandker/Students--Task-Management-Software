@@ -1,0 +1,30 @@
+public void ExamInsertion(string subject, string module, DateTime date, string startTime, string duration, string seat, string room)
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+
+                string query = "INSERT INTO Tbl_Exam (Email, Subject, Module, Date, StartTime, Duration, Seat, Room) VALUES ('" + userEmail + "', '" + subject + "' , '" + module + "', '" + date.Date + "', '" + startTime + "', '" + duration + "', '" + seat + "', '" + room + "')";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+        }
