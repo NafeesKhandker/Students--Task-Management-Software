@@ -116,6 +116,49 @@ namespace MyStudyLife
 
         }
 
+        private void textBoxFilterByYear_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void buttonNew_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (buttonNew.Content == strNewTask)
+            {
+                gridHome.Children.Clear();
+                gridHome.Children.Add(gridHeader);
+                //gridFilter.Width = 459;
+                //labelCurrent.Content = "Current Tasks";
+                gridHome.Children.Add(gridFilter);
+                gridHome.Children.Add(gridNewTask);
+
+            }
+
+            else if (buttonNew.Content == strNewExam)
+            {
+
+                gridHome.Children.Clear();
+                gridHome.Children.Add(gridHeader);
+                //gridFilter.Width = 459;
+                gridHome.Children.Add(gridFilter);
+                gridHome.Children.Add(gridExam);
+
+            }
+
+            else if (buttonNew.Content == strNewClass)
+            {
+
+                gridHome.Children.Clear();
+                gridHome.Children.Add(gridHeader);
+                //gridFilter.Width = 459;
+                gridHome.Children.Add(gridFilter);
+                gridHome.Children.Add(gridClass);
+
+            }
+        }
+
+
         
     }
 }
