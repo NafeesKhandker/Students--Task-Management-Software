@@ -1,0 +1,75 @@
+public DataTable PastExam()
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+                DateTime DateToday = DateTime.UtcNow.Date;
+                string query = "DECLARE @sDate Date SET @sDate = '" + DateToday.Date + "' SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE cast([Date] as date) < @sDate";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+                DataTable dataTbl = new DataTable("Tbl_Exam");
+                dataAdp.Fill(dataTbl);
+                dataAdp.Update(dataTbl);
+                return dataTbl;
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+                return null;
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }public DataTable PastExam()
+        {
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+                DateTime DateToday = DateTime.UtcNow.Date;
+                string query = "DECLARE @sDate Date SET @sDate = '" + DateToday.Date + "' SELECT Subject, Module, Date, StartTime, Duration, Seat, Room FROM Tbl_Exam WHERE cast([Date] as date) < @sDate";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+                DataTable dataTbl = new DataTable("Tbl_Exam");
+                dataAdp.Fill(dataTbl);
+                dataAdp.Update(dataTbl);
+                return dataTbl;
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+                return null;
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }
+
+
+        }
