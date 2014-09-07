@@ -215,6 +215,28 @@ namespace MyStudyLife
             RefreshExam();
         
         }
+
+	private void buttonNESave_Click(object sender, RoutedEventArgs e)
+        {
+
+            ModelClass model = new ModelClass();
+            model.ExamInsertion(textBoxNESubject.Text, textBoxNEModule.Text, Convert.ToDateTime(datePickerNEDate.SelectedDate), textBoxNEStartTime.Text, textBoxNEDuration.Text, textBoxNESeat.Text, textBoxNERoom.Text);
+
+            RefreshExam();
+
+            if (comboBoxCurrentTask.SelectedIndex == 0)
+                RefreshDataCurrentExam();
+            else
+                RefreshDataPastExam();
+        }
+
+
+        private void buttonNTCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+            RefreshTask();
+
+        }
         
     }
 }
