@@ -75,6 +75,47 @@ namespace MyStudyLife
 
         }
 
+        private void comboBoxCurrentTask_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            if (buttonNew.Content == strNewTask)
+            {
+
+                if (comboBoxCurrentTask.SelectedIndex == 0)
+                {
+
+                    RefreshDataCurrentTask();
+
+                }
+
+                else
+                {
+
+                    RefreshDataPastTask();
+
+                }
+
+            }
+
+            else if (buttonNew.Content == strNewExam)
+            {
+                if (comboBoxCurrentTask.SelectedIndex == 0)
+                {
+
+                    RefreshDataCurrentExam();
+
+                }
+
+                else
+                {
+
+                    RefreshDataPastExam();
+
+                }
+            }
+
+        }
+
         
     }
 }
