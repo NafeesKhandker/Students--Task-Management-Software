@@ -1,0 +1,31 @@
+public void TaskInsertion(string subject, string type, DateTime dueDate, string title, string detail)
+        {
+
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            try
+            {
+
+                string query = "INSERT INTO Tbl_Task (Email, Subject, Type, DueDate, Title, Detail) VALUES ('" + userEmail + "', '" + subject + "' , '" + type + "', '" + dueDate.Date + "', '" + title + "', '" + detail + "')";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+
+            catch (Exception e)
+            {
+
+                conn.Close();
+
+            }
+
+            finally
+            {
+
+                conn.Close();
+
+            }    
+        
+        }
