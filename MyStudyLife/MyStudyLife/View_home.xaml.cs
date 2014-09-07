@@ -261,6 +261,59 @@ namespace MyStudyLife
                 RefreshDataPastTask();
 
         }
+
+	private void buttonNewAlt_Click(object sender, RoutedEventArgs e)
+        {
+            if (buttonNew.Content == strNewTask)
+            {
+                gridHome.Children.Clear();
+                gridHome.Children.Add(gridHeader);
+                //gridFilter.Width = 459;
+                //labelCurrent.Content = "Current Tasks";
+                gridHome.Children.Add(gridFilter);
+                gridHome.Children.Add(gridNewTask);
+
+            }
+
+            else if (buttonNew.Content == strNewExam)
+            {
+
+                gridHome.Children.Clear();
+                gridHome.Children.Add(gridHeader);
+                //gridFilter.Width = 459;
+                gridHome.Children.Add(gridFilter);
+                gridHome.Children.Add(gridExam);
+
+            }
+
+            else if (buttonNew.Content == strNewClass)
+            {
+
+                gridHome.Children.Clear();
+                gridHome.Children.Add(gridHeader);
+                //gridFilter.Width = 459;
+                gridHome.Children.Add(gridFilter);
+                gridHome.Children.Add(gridClass);
+
+            }
+        }
+
+        public void RefreshTask()
+        {
+
+            gridHome.Children.Clear();
+            gridHome.Children.Add(gridHeader);
+            labelCurrent.Visibility = Visibility.Visible;
+            comboBoxCurrentTask.Visibility = Visibility.Visible;
+            buttonNew.Content = strNewTask;
+            labelHeader.Content = "Tasks";
+            labelCurrent.Content = "Tasks";
+            gridHome.Children.Add(gridFilter);
+            buttonNewAlt.Content = strNewTask;
+            gridHome.Children.Add(gridNew);
+        
+        }
+
         
     }
 }
