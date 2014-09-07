@@ -1,0 +1,58 @@
+private void btnInsert_Click(object sender, EventArgs e)
+{
+    testdbEntities testcontext = new testdbEntities();
+    try
+    {
+
+        employee emp = new employee
+
+                   {
+                       EmpId = int.Parse(txtId.Text),
+                       EmpName = txtName.Text,
+                       EmpAddress = txtAddress.Text
+                   };
+        testcontext.employee.AddObject(emp);
+        testcontext.SaveChanges();
+        MessageBox.Show("Record Inserted successfully.");
+        LoadToGrid();
+    }
+    catch (Exception ex)
+    {
+
+        MessageBox.Show(ex.InnerException.ToString());
+    }
+}
+
+private void btnUpdate_Click(object sender, EventArgs e)
+{
+    int EmpId;
+    string s = txtId.Text;
+    int.TryParse(s, out EmpId);
+    testdbEntities testcontext = new testdbEntities();
+    try
+    {
+        employee emp = testcontext.employee.First(i => i.EmpId == EmpId);
+        {
+            emp.EmpName = txtName.Text;
+            emp.EmpAddress = txtAddress.Text;
+            testcontext.SaveChanges();
+            MessageBox.Show("Record Updated successfully.");
+            LoadToGrid();
+        };
+    }
+    catch (Exception ex)
+    {
+
+        MessageBox.Show(ex.InnerException.ToString());
+    }
+}
+
+private void LoadToGrid()
+{
+    testdbEntities testcontext = new testdbEntities();
+    var load = from g in testcontext.employee select g;
+    if (load != null)
+    {
+        dataGridView1.DataSource = load.ToList();
+    }
+}
