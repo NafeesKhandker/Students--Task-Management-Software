@@ -1,0 +1,110 @@
+ public class ClubMember
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public int Occupation { get; set; }
+        public Nullable<decimal> Salary { get; set; }
+        public int MaritalStatus { get; set; }
+        public int HealthStatus { get; set; }
+        public Nullable<int> NumberOfChildren { get; set; }
+    }
+    
+     public class SocialClubDbContext : DbContext
+    {
+        public SocialClubDbContext()
+            : base("SocialClub.DbConnection")
+        {
+            Database.SetInitializer<socialclubdbcontext>(new SocialClubInitializer());
+            Configuration.ProxyCreationEnabled = false;
+        }
+
+        public DbSet<clubmember> ClubMembers { get; set; }
+    }
+    
+      public class SocialClubInitializer : CreateDatabaseIfNotExists<socialclubdbcontext>
+    {
+        protected override void Seed(SocialClubDbContext context)
+        {
+            var clubMembers = new List<clubmember>{
+                new ClubMember { 
+                    Name = "Pete Darson", 
+                    Occupation = (int)Occupation.Doctor, 
+                    HealthStatus = (int)HealthStatus.Good, 
+                    MaritalStatus = (int)MaritalStatus.Married, 
+                    NumberOfChildren = 2, 
+                    DateOfBirth = new DateTime(1982,07,12), 
+                    Salary = 5500 
+                },
+                new ClubMember { 
+                    Name = "Mat Pearson", 
+                    Occupation = (int)Occupation.Engineer, 
+                    HealthStatus = (int)HealthStatus.Excellent, 
+                    MaritalStatus = (int)MaritalStatus.Single, 
+                    NumberOfChildren = 0, 
+                    DateOfBirth = new DateTime(1980,05,21), 
+                    Salary = 3500 
+                }               
+            };
+
+            clubMembers.ForEach(category => context.ClubMembers.Add(category));
+        }
+    }
+    
+    
+            
+<connectionStrings>
+   <add name="SocialClub.DbConnection" 
+   providerName="System.Data.SqlClient" 
+   connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=SocialClub;Integrated Security=true" />
+</connectionStrings>
+ public static DataTable ToDataTable<t>(this IList<t> data)
+    {
+        PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
+        DataTable table = new DataTable();
+        foreach (PropertyDescriptor prop in properties)
+        {
+            table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) 
+              ?? prop.PropertyType);                
+        }
+        foreach (T item in data)
+        {
+            DataRow row = table.NewRow();
+            foreach (PropertyDescriptor prop in properties)
+            {
+                row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+            }
+            table.Rows.Add(row);
+        }
+        return table;
+    }
+
+    public static DataRow ToDataRow<t>(this T data)
+    {
+        PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
+        DataTable table = new DataTable();
+        foreach (PropertyDescriptor prop in properties)
+        {
+            table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) 
+              ?? prop.PropertyType);
+        }
+        DataRow row = table.NewRow();
+        foreach (PropertyDescriptor prop in properties)
+        {
+            row[prop.Name] = prop.GetValue(data) ?? DBNull.Value;
+        }
+        table.Rows.Add(row);
+        return table.Rows[0];
+    }
+
+
+ public interface IClubMemberService
+    {
+        DataRow GetById(int Id);
+        DataTable GetAll();
+        DataTable Search(int occupation, int maritalStatus, string operand);
+        bool Create(ClubMember clubMember);
+        bool Update(ClubMember clubMember);
+        bool Delete(int id);       
+    }
+    
