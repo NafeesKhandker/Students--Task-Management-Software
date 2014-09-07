@@ -237,6 +237,30 @@ namespace MyStudyLife
             RefreshTask();
 
         }
+
+	private void buttonSearch_Click(object sender, RoutedEventArgs e)
+        {
+            gridHome.Children.Clear();
+
+            UserControlSearch ucSearch = new UserControlSearch();
+            gridHome.Children.Add(ucSearch);
+
+        }
+
+        private void buttonNTSave_Click(object sender, RoutedEventArgs e)
+        {
+
+            ModelClass model = new ModelClass();
+            model.TaskInsertion(textBoxNTSubject.Text, textBoxNTType.Text, Convert.ToDateTime(datePickerNT.SelectedDate), textBoxNTTitle.Text, textBoxNTDetail.Text);
+
+            RefreshTask();
+
+            if (comboBoxCurrentTask.SelectedIndex == 0)
+                RefreshDataCurrentTask();
+            else
+                RefreshDataPastTask();
+
+        }
         
     }
 }
